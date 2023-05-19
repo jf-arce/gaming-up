@@ -1,7 +1,7 @@
 import { useState } from "react"
-import { Button } from './Button'
-import { CartWidget } from "./CartWidget"
-import { NavBarSections } from "./NavBar/NavBarSections"
+import { Button } from '../Button/Button'
+import { CartWidget } from "../CartWidget/CartWidget"
+import { NavBarSections } from "../NavBar/NavBarSections"
 
 //Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -41,7 +41,7 @@ export const MenuResponsive = ({active}) => {
                 <NavBarSections icon={<FontAwesomeIcon icon={faWandMagicSparkles} />} text={"Sobre Nosotros"}/>
                 <NavBarSections icon={<FontAwesomeIcon icon={faUser} />} text={"Contacto"}/>
                 <NavBarSections icon={<FontAwesomeIcon icon={faStar} />} text={"Eventos"}/>
-                <Button text="Log in"/>
+                <Button text="Log in" className="btn"/>
             </ul>
         </div>
     )

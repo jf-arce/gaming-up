@@ -1,0 +1,29 @@
+.btn{
+    @apply 
+    text-slate-50 
+    bg-lightBlue 
+    rounded-sm 
+    px-4 
+    py-2
+    hover:bg-sky-200
+    hover:text-lightBlue
+    hover:shadow-xl
+    hover:transition-colors
+    transition-colors
+    ; 
+}
+
+.btn2{
+    @apply 
+    text-sky-600
+    bg-slate-50
+    rounded-sm
+    transition-colors 
+    px-4 
+    py-2
+    hover:bg-lightBlue 
+    hover:text-slate-50
+    hover:shadow-xl
+    hover:transition-colors
+    ;
+}

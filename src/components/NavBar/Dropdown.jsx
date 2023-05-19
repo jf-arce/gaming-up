@@ -1,11 +1,7 @@
-import { NavBarSections } from "./NavBar/NavBarSections"
+import { NavBarSections } from "./NavBarSections"
 
 //Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faBasketShopping} from '@fortawesome/free-solid-svg-icons'
-import {faUser} from '@fortawesome/free-solid-svg-icons'
-import {faWandMagicSparkles} from '@fortawesome/free-solid-svg-icons'
-import {faStar} from '@fortawesome/free-solid-svg-icons'
 import {faKeyboard} from '@fortawesome/free-solid-svg-icons'
 import {faComputerMouse} from '@fortawesome/free-solid-svg-icons'
 import {faDesktop} from '@fortawesome/free-solid-svg-icons'
@@ -14,7 +10,7 @@ import {faComputer} from '@fortawesome/free-solid-svg-icons'
 
 export const Dropdown = ({active}) =>{
     return(
-        <div id="dropdown" className={`${active? "xl:flex top-24 dropDown-active" : ""} h-auto fixed z-0 w-full hidden justify-center items-center bg-lightBlack`}>
+        <div id="dropdown" className={`${active? "xl:flex top-24 dropDown-active" : ""} h-auto fixed z-10 w-full hidden justify-center items-center bg-lightBlack`}>
             <div className="w-9/12 flex justify-center m-6 container-siblings flex-wrap gap-14">
                 <DropDownSections name="Teclados">
                     <NavBarSections icon={<FontAwesomeIcon icon={faKeyboard} />}text={"Teclados"}/>  

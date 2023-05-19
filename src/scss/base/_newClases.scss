@@ -10,20 +10,7 @@
     }
 }
 
-.btn{
-    @apply 
-    text-slate-50 
-    bg-lightBlue 
-    rounded-sm 
-    px-4 
-    py-2
-    hover:bg-slate-50
-    hover:text-lightBlue
-    hover:shadow-xl
-    hover:transition-colors
-    transition-colors
-    ; 
-}
+
 
 //Underline de links en el nav
 .underlineEffect{
