@@ -1,0 +1,13 @@
+/****** FADING SIBLINGS ON HOVER (Hermanos que se desvanecen en hover) *******/
+
+/*Se coloca la clase 'container-siblings' al contenedor de los divs padre y la clase'sibling' a cada div hijo*/
+.sibling{
+    transition: transform 200ms, filter 200ms;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+.container-siblings:has(.sibling:hover) > .sibling:not(:hover){
+    filter: brightness(0.5) saturate(0.5) contrast(0.5) blur(1px);
+    transform: scale(0.9);
+}

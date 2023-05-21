@@ -24,7 +24,7 @@ export const MenuResponsive = ({active}) => {
     const menuActive=()=> menu ? "dropLeft-active flex flex-col items-start justify-center gap-5 mx-12" : "hidden";
 
     return (
-        <div className={`${active? "dropDown-active" : "hidden"} w-screen absolute top-0 -z-0 bg-lightBlack my-24 xl:hidden`}>
+        <div className={`${active? "dropDown-active" : "hidden"} w-screen absolute top-0 z-10 bg-lightBlack my-24 xl:hidden`}>
             <div className="flex flex-col justify-center items-center">
                 <h2 className="m-5 text-3xl text-slate-200">Carrito</h2>
                 <CartWidget/>

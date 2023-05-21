@@ -10,6 +10,15 @@
 @import "./base/mixins";
 @import "./base/defaults";
 @import "./base/newClases";
-@import "./components/btns.scss"
+
+//Components
+@import "../components/Button/Button.scss";
+@import "../components/Carrousel/Carrousel.scss";
+
+//Animations
+@import "./animations/favorite.scss";
+@import "./animations/underline.scss";
+@import "./animations/fadingOnHover.scss";
+
 
 

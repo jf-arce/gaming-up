@@ -6,7 +6,7 @@ import 'swiper/css/bundle';
 
 export default () => {
   return (
-    <div>
+    <div data-aos="fade-right">
         <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -14,7 +14,6 @@ export default () => {
         slidesPerView={1}
         navigation //FLECHAS
         pagination={{ clickable: true }} //PUNTOS
-        scrollbar={{ draggable: true }} //BARRA DE SCROLL
         autoplay
         loop
         >
@@ -22,7 +21,7 @@ export default () => {
                 <img className="slider-img" src="https://www.fullh4rd.com.ar/adminrgb/img/banner/143.png" alt="" />
             </SwiperSlide>
             <SwiperSlide>
-                <img className="slider-img" src="https://www.fullh4rd.com.ar/adminrgb/img/banner/117.png" alt="" />
+                <img className="slider-img" src="https://www.gezatek.com.ar/uploads/15-05-2023-04-05-34-20-04-2023-05-04-24-RTX-SERIE-40-2200x600-GEZATEK.jpg" alt="" />
             </SwiperSlide>
             <SwiperSlide>
                 <img className="slider-img" src="https://www.fullh4rd.com.ar/adminrgb/img/banner/130.png" alt="" />

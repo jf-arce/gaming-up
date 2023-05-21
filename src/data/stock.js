@@ -1,12 +1,36 @@
 const stock = [
     {
         id: 1,
-        nombre: 'Monitor Acer Predator X27',
-        descripcion: 'Monitor IPS 4K de 27 pulgadas con frecuencia de actualización de 144 Hz y soporte para G-Sync y HDR',
+        nombre: 'SAMSUNG ODYSSEY G4 FHD 240HZ',
+        descripcion: `
+        Marca : Samsung
+        P/N : LS25BG400ELXZB
+        Color : Negro
+        Tamaño de panel : 25"
+        Curvo/Plano : Plano
+        Colores : 16.7M
+        Tipo de panel : IPS
+        Resolución : 1920 x 1080 FHD
+        Ángulo de vision : 178 grados / 178 grados
+        Parlantes : No
+        Conectividad : 1 x Display Port, 2 x HDMI, 1 x USB, 1 x miniplug
+        Frecuencia de actualizacion : 240 Hz
+        Tiempo de respuesta (ms) : 1 ms
+        Voltaje : 100-240 V, 50/60 Hz
+        Inclinación : Si
+        Giratorio : Si
+        Pivote : Si
+        Ajuste en altura : Si
+        Freesync/Gsync : G-Sync
+        `,
         cantidad: 10,
         precio: 269.999,
-        imagen:'https://i.pcmag.com/imagery/reviews/074fs6JJYgfDgoy3QwAHelw-8.fit_scale.size_760x427.v1569478388.jpg',
         stock:6, 
+        image1:'https://www.fullh4rd.com.ar/img/productos/Pics_Prod/monitor-gamer-25-samsung-odyssey-g4-fhd-240hz-dp-hdmi-0.jpg',
+        image2:'https://www.fullh4rd.com.ar/img/productos/Pics_Prod/monitor-gamer-25-samsung-odyssey-g4-fhd-240hz-dp-hdmi-1.jpg',
+        image3:'https://www.fullh4rd.com.ar/img/productos/Pics_Prod/monitor-gamer-25-samsung-odyssey-g4-fhd-240hz-dp-hdmi-2.jpg',
+        image4:'https://www.fullh4rd.com.ar/img/productos/Pics_Prod/monitor-gamer-25-samsung-odyssey-g4-fhd-240hz-dp-hdmi-3.jpg',
+        
     },
     {
         id: 2,
@@ -16,6 +40,10 @@ const stock = [
         precio: 19.999,
         imagen:'https://backupcomputacion.com/imagenes/articulos/mouse_gamer/mouse_logitech_g_pro_x_superlight_negro01.jpg',
         stock:10, 
+        image1:'https://www.fullh4rd.com.ar/img/productos/Pics_Prod/mouse-logitech-g305-lightspeed-wireless-black-0.jpg',
+        image2:'https://www.fullh4rd.com.ar/img/productos/Pics_Prod/mouse-logitech-g305-lightspeed-wireless-black-1.jpg',
+        image3:'https://www.fullh4rd.com.ar/img/productos/Pics_Prod/mouse-logitech-g305-lightspeed-wireless-black-2.jpg',
+        image4:'https://www.fullh4rd.com.ar/img/productos/Pics_Prod/mouse-logitech-g305-lightspeed-wireless-black-3.jpg',
     },
     {
         id: 3,

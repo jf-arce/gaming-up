@@ -10,46 +10,6 @@
     }
 }
 
-
-
-//Underline de links en el nav
-.underlineEffect{
-    display: inline-block;
-    position: relative;
-    &::after{
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        height: 1.5px;
-        width: 100%;
-        @apply bg-lightBlue;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 0.6s ease-out;
-        will-change: transform;
-    }
-    &:hover::after{
-        transform: scaleX(1);
-        transform-origin: bottom left;
-    }
-}
-
-/****** FADING SIBLINGS ON HOVER (Hermanos que se desvanecen en hover) *******/
-
-/*Se coloca la clase 'container-siblings' al contenedor de los divs padre y la clase'sibling' a cada div hijo*/
-.sibling{
-    transition: transform 200ms, filter 200ms;
-    &:hover{
-        transform: scale(1.1);
-    }
-}
-.container-siblings:has(.sibling:hover) > .sibling:not(:hover){
-    filter: brightness(0.5) saturate(0.5) contrast(0.5) blur(1px);
-    transform: scale(0.9);
-}
-
-
 //DropDown
 .dropDown-active{
     animation: slideInFromTop 700ms ease;

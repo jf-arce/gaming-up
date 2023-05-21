@@ -21,14 +21,15 @@ export const ItemCount = ({stock}) => {
   const addToCart = () => amount
 
   return (
-    <div className="flex flex-col items-center gap-6">
+    <div className="flex flex-col items-center gap-16">
       <div className="flex items-center gap-9 text-base text-white">
-        <button onClick={handleSubtract} className={`${amount === 1 ? "bg-red-500" : "bg-lightBlue hover:bg-sky-400 hover:transition-colors"} px-3 py-1 rounded-sm  `}>-</button>
-        <h4>{amount}</h4>
-        <button onClick={handleAdd} className={`${amount < stock ? "bg-lightBlue hover:bg-sky-400 hover:transition-colors" : "bg-red-500"} px-3 py-1 rounded-sm  `}>+</button>
+        <button onClick={handleSubtract} className='bg-red-500 hover:bg-red-400 px-3 py-1 rounded-sm'>-</button>
+        <h4 className="text-lightBlack">{amount}</h4>
+        <button onClick={handleAdd} className='bg-lightBlue hover:bg-sky-400 hover:transition-colors px-3 py-1 rounded-sm'>+</button>
       </div>
-      <div>
+      <div className="flex gap-8">
         <Button text={<>{cartIcon} {`Agregar`}</>} onClick={addToCart} disabled={!stock} className="btn2"/>
+        <Button text="Comprar Ahora" className="btn"/>
       </div>
     </div>
   )

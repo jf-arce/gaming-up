@@ -1,0 +1,19 @@
+.favorite-heart{
+    position: relative;
+    animation: favorite 250ms ease-in-out;
+}
+@keyframes favorite{
+    0%{
+        transform: scale(0.4) translateY(0);
+    }
+    50%{
+        transform: scale(1.5) translateY(-18px);
+    }
+    100%{
+        transform: scale(1) translateY(0);
+       
+    }
+}
+
+
+

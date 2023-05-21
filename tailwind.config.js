@@ -13,6 +13,11 @@ export default {
       },
       backgroundImage: {
         'hero-banner': "url('./src/assets/images/banner.png')",
+        // 'gradiantBlue':"linear-gradient(90deg, rgba(219,239,255,1) 0%, rgba(220,229,255,1) 50%, rgba(163,184,255,1) 100%);"
+        // 'gradiantBlue':"linear-gradient(to bottom, #ffffff, #dadcf1, #aebce3, #769ed6, #0284c7);"
+        'gradiantBlue':"linear-gradient(180deg, #56a2cd 0%, #ffffff 100%);",
+        
+
       }
     },
   },

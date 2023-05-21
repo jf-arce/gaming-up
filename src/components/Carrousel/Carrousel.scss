@@ -1,0 +1,22 @@
+/*SWIPER*/
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+  font-size: 30px !important; /* Cambia el tamaño de las flechas */
+  color: rgb(255, 255, 255); /* Cambia el color de las flechas */
+}
+.swiper-pagination-bullet-active{
+  background-color: aliceblue !important;
+}
+
+.slider-img{
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+
+@media screen and (max-width:1024px) {
+  .slider-img{
+    height: 300px;
+  }
+}
