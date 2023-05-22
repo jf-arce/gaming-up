@@ -14,6 +14,7 @@ import {faComputerMouse} from '@fortawesome/free-solid-svg-icons'
 import {faDesktop} from '@fortawesome/free-solid-svg-icons'
 import {faHeadphones} from '@fortawesome/free-solid-svg-icons'
 import {faComputer} from '@fortawesome/free-solid-svg-icons'
+import { useHideTopBar } from "../../Hooks/useHideTopBar"
 
 export const MenuResponsive = ({active}) => {
     const [menu,setMenu] = useState(false);
@@ -23,8 +24,10 @@ export const MenuResponsive = ({active}) => {
     }
     const menuActive=()=> menu ? "dropLeft-active flex flex-col items-start justify-center gap-5 mx-12" : "hidden";
 
+    const isScrolled = useHideTopBar(44)
+
     return (
-        <div className={`${active? "dropDown-active" : "hidden"} w-screen absolute top-0 z-10 bg-lightBlack my-24 xl:hidden`}>
+        <div className={`${active? "dropDown-active" : "hidden"} ${isScrolled ? 'top-24 transition-all' : 'top-[140px] transition-all'} w-screen fixed z-10 bg-lightBlack xl:hidden`}>
             <div className="flex flex-col justify-center items-center">
                 <h2 className="m-5 text-3xl text-slate-200">Carrito</h2>
                 <CartWidget/>

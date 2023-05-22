@@ -32,9 +32,8 @@ function App() {
         <main onClick={()=> setActive(false)}>
           <Routes>
             <Route path='/' element = {<Home/>} />
-            <Route path='/catalogo' element={<ItemListContainer/>}/>
             <Route path='/category/:categoryId' element={<ItemListContainer/>} />
-            <Route path='/product/:id' element ={<ItemDetailContainer/>} />
+            <Route path='/item/:id' element ={<ItemDetailContainer/>} />
             <Route path='*' element={<h1 className='absolute bottom-0'>Error 404: Page not found</h1>}/>
           </Routes>
         </main>  
