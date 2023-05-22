@@ -1,32 +1,44 @@
+//React
 import React, { useState } from 'react'
+//elements
+import Home from './pages/home';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+//Layouts
 import { NavBar } from "./components/NavBar/NavBar"
-import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer"
 import { Dropdown } from './components/NavBar/Dropdown'
 import { MenuResponsive } from './components/Responsive/MenuResponsive';
-import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
-import Carrousel from './components/Carrousel/Carrousel';
-
+//Libraries
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { TopBar } from './components/TopBar.jsx/TopBar';
 
 function App() {
   AOS.init();
   const [active,setActive] = useState(false);
-
+  
   const dropDownEvent=()=>{
-    setActive(!active)
+    setActive(!active);
   }
-  return (
-    <div className="app">
-      <NavBar evento={dropDownEvent}/>
-      <main className='mt-24 bg-darkBlack'>
+
+  return(
+    <div className='App bg-lightBlack'>
+      <BrowserRouter>
+        <TopBar/>
+        <NavBar evento={dropDownEvent}/>
         <MenuResponsive active={active}/>
-        <Dropdown active={active}/>
-        <Carrousel/>
-        <ItemListContainer greeting="BIENVENID@ A GAMING UP"/>
-        <ItemDetailContainer/>
-        
-      </main>
+        <Dropdown active={active} setActive={setActive}/>
+        <main onClick={()=> setActive(false)}>
+          <Routes>
+            <Route path='/' element = {<Home/>} />
+            <Route path='/catalogo' element={<ItemListContainer/>}/>
+            <Route path='/category/:categoryId' element={<ItemListContainer/>} />
+            <Route path='/product/:id' element ={<ItemDetailContainer/>} />
+            <Route path='*' element={<h1 className='absolute bottom-0'>Error 404: Page not found</h1>}/>
+          </Routes>
+        </main>  
+      </BrowserRouter>
     </div>
   )
 }

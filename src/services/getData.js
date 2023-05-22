@@ -5,9 +5,11 @@ export default function getData(){
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(stock);
-        }, 500);
+        }, 200);
     })
 }
+
+
 
 
 

@@ -4,10 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faBars} from '@fortawesome/free-solid-svg-icons'
 import { CartWidget } from '../CartWidget/CartWidget'
 import { Logo } from '../Logo/Logo'
+import { useHideTopBar } from '../../Hooks/useHideTopBar'
 
 export const NavBar = ({evento}) => {
+  
+  const isScrolled = useHideTopBar(44);
+
   return (
-    <header className='h-24 flex items-center justify-center bg-darkBlack w-full fixed top-0 z-20'>
+    <header className={`h-24 flex items-center justify-center bg-darkBlack w-full ${isScrolled ? 'sticky top-0 z-20' : 'relative z-20'}`}>
       <div data-aos="fade-down" className='grid grid-cols-2 xl:grid-cols-3 w-9/12 mx-auto'>
         <Logo/>
         <Nav evento={evento}/>
