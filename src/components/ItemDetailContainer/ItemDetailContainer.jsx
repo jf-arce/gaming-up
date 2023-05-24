@@ -26,7 +26,7 @@ export const ItemDetailContainer = () => {
 
   return (
     <section className='min-h-screen'>
-      <div data-aos="fade-up" className="bg-white grid grid-cols-1 grid-rows-[auto] w-11/12 min-h-screen xl:w-9/12 m-auto lg:grid-cols-2 lg:grid-rows-[auto]">
+      <div data-aos="fade-down" className="bg-white grid grid-cols-1 grid-rows-[auto] w-11/12 min-h-screen xl:w-9/12 m-auto lg:grid-cols-2 lg:grid-rows-[auto]">
         <div className="border-[1px] border-b-gray-300 flex flex-col justify-evenly items-center p-5 gap-5">
           <img className='w-[70%]' src={img} alt={product.nombre} />
           <div className='flex justify-evenly items-center gap-2'>
