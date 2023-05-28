@@ -11,7 +11,7 @@ export const Item = ({nombre,precio,imagen,id}) => {
     setfav(!fav);
   }
   return (
-    <div data-aos="fade-up" className="relative bg-white w-80 min-h-[350px] flex flex-col justify-around items-center rounded-sm">
+    <div data-aos="fade-up" className="relative bg-white w-80 min-h-[350px] flex flex-col justify-around items-center rounded-sm  hover:shadow-lg transition-shadow">
       <div onClick={handleFav} className="absolute top-0 right-0 mr-4 mt-3 bg-lightBlack rounded-full flex justify-center items-center cursor-pointer"><FontAwesomeIcon icon={faHeart} className={`m-2 ${fav? 'text-red-500 favorite-heart' : 'text-slate-50'}`}/></div>
       <Link to={`/item/${id}`}><img src={imagen} alt={nombre} className="w-full object-cover h-[150px] pt-3"/></Link>
       <div className='bg-white flex flex-col justify-center items-start w-full px-5 gap-4'>

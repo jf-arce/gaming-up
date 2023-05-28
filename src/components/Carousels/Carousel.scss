@@ -12,18 +12,21 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
-  height: 100%;
+  height: 500px;
 }
-
-@media screen and (max-width:1024px) {
+@media screen and (max-width: 768px) {
   .slider-img{
-    height: 320px;
+    height: 200px;
   }
 }
 
-                   
+//slick                   
 .slider-prod{
   display: flex !important; 
   justify-content: center;
   align-items: center;
+}
+
+.slick-next:before, .slick-prev:before {
+  color: #000;
 }

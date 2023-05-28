@@ -10,7 +10,7 @@ import {faStar} from '@fortawesome/free-solid-svg-icons'
 export const Nav = ({evento}) => {
     return (
     <nav className='hidden justify-center items-center xl:flex'>
-        <ul className='flex justify-center items-center gap-11'>
+        <ul className='flex justify-center items-center gap-5'>
             <NavBarSections icon={<FontAwesomeIcon icon={faBasketShopping}/>} text={"Productos"} event={evento}/>
             <Link to='/about'>
                 <NavBarSections url="/product" icon={<FontAwesomeIcon icon={faWandMagicSparkles} />} text={"About"}/>

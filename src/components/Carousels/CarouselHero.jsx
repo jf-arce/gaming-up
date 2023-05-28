@@ -4,7 +4,7 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 // Import Swiper styles
 import 'swiper/css/bundle';
 
-export default function CarrouselHero () {
+export default function CarouselHero () {
   return (
     <div data-aos="fade-right">
         <Swiper
@@ -16,9 +16,10 @@ export default function CarrouselHero () {
         pagination={{ clickable: true }} //PUNTOS
         autoplay
         loop
+        
         >
             <SwiperSlide>
-                <img className="slider-img" src="https://www.fullh4rd.com.ar/adminrgb/img/banner/143.png" alt="" />
+                <img className="slider-img" src="https://www.fullh4rd.com.ar/adminrgb/img/banner/126.png" alt="" />
             </SwiperSlide>
             <SwiperSlide>
                 <img className="slider-img" src="https://www.gezatek.com.ar/uploads/15-05-2023-04-05-34-20-04-2023-05-04-24-RTX-SERIE-40-2200x600-GEZATEK.jpg" alt="" />
@@ -27,7 +28,7 @@ export default function CarrouselHero () {
                 <img className="slider-img" src="https://www.fullh4rd.com.ar/adminrgb/img/banner/130.png" alt="" />
             </SwiperSlide>
             <SwiperSlide>
-                <img className="slider-img" src="https://www.fullh4rd.com.ar/adminrgb/img/banner/138.png" alt="" />
+                <img className="slider-img" src="https://www.fullh4rd.com.ar/adminrgb/img/banner/74.png" alt="" />
             </SwiperSlide>
         </Swiper>
     </div>

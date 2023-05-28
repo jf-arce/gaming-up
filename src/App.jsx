@@ -13,6 +13,7 @@ import 'aos/dist/aos.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { TopBar } from './components/TopBar.jsx/TopBar';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   AOS.init();
@@ -29,14 +30,16 @@ function App() {
         <NavBar evento={dropDownEvent}/>
         <MenuResponsive active={active}/>
         <Dropdown active={active} setActive={setActive}/>
-        <main onClick={()=> setActive(false)}>
+        <main onClick={()=> setActive(false)} className='bg-gray-100'>
           <Routes>
             <Route path='/' element = {<Home/>} />
+            <Route path='/category/all' element={<ItemListContainer/>} />
             <Route path='/category/:categoryId' element={<ItemListContainer/>} />
             <Route path='/item/:id' element ={<ItemDetailContainer/>} />
             <Route path='*' element={<h1 className='absolute bottom-0'>Error 404: Page not found</h1>}/>
           </Routes>
         </main>  
+        <Footer/>
       </BrowserRouter>
     </div>
   )

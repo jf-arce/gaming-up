@@ -27,7 +27,7 @@ export const MenuResponsive = ({active}) => {
     const isScrolled = useHideTopBar(44)
 
     return (
-        <div className={`${active? "dropDown-active" : "hidden"} ${isScrolled ? 'top-24 transition-all' : 'top-[140px] transition-all'} w-screen fixed z-10 bg-lightBlack xl:hidden`}>
+        <div className={`${active? "dropDown-active" : "hidden"} ${isScrolled ? 'fixed top-24' : 'absolute top-[140px]'} w-screen z-10 bg-lightBlack xl:hidden`}>
             <div className="flex flex-col justify-center items-center">
                 <h2 className="m-5 text-3xl text-slate-200">Carrito</h2>
                 <CartWidget/>
