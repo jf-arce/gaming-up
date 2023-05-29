@@ -55,6 +55,9 @@ export const MenuResponsive = ({active,setActive}) => {
                     <Link to='/category/pc' onClick={handleClickChoice}>
                         <NavBarSections icon={<FontAwesomeIcon icon={faComputer} />}text={"Computadoras"}/>     
                     </Link>
+                    <Link to='/category/all' onClick={handleClickChoice}>
+                        <NavBarSections icon={<FontAwesomeIcon icon={faComputer} />}text={"All"}/>     
+                    </Link>
                 </div>
                 <NavBarSections icon={<FontAwesomeIcon icon={faWandMagicSparkles} />} text={"Sobre Nosotros"}/>
                 <NavBarSections icon={<FontAwesomeIcon icon={faUser} />} text={"Contacto"}/>
