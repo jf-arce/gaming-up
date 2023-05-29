@@ -28,7 +28,7 @@ function App() {
       <BrowserRouter>
         <TopBar/>
         <NavBar evento={dropDownEvent}/>
-        <MenuResponsive active={active}/>
+        <MenuResponsive active={active} setActive={setActive}/>
         <Dropdown active={active} setActive={setActive}/>
         <main onClick={()=> setActive(false)} className='bg-gray-100'>
           <Routes>
