@@ -1,6 +1,6 @@
 export const TopBar = () => {
   return (
-    <div className="w-full h-11 bg-black flex justify-center">
+    <div className="w-full h-11 bg-lightBlue flex justify-center">
         <div className="w-full lg:w-9/12 flex justify-between">
             <div className="hidden lg:flex lg:gap-8 ">
                 <picture className='flex justify-center'>
@@ -25,7 +25,7 @@ export const TopBar = () => {
                     <img src="https://logodownload.org/wp-content/uploads/2014/09/msi-logo-0.png" alt="" />
                 </picture>
             </div>
-            <div className="w-full lg:w-auto flex justify-evenly lg:justify-center items-center text-gray-300 text-xs lg:text-sm gap-6">
+            <div className="w-full lg:w-auto flex justify-evenly lg:justify-center items-center text-gray-100 text-xs lg:text-sm gap-6">
                 <h4>📞(221) 458-7589</h4>
                 <a href="">✉ gamingup@gmail.com</a>
                 <h4>📍 La Plata</h4>

@@ -7,7 +7,7 @@ import {faUser} from '@fortawesome/free-solid-svg-icons'
 import {faWandMagicSparkles} from '@fortawesome/free-solid-svg-icons'
 import {faStar} from '@fortawesome/free-solid-svg-icons'
 
-export const Nav = ({evento}) => {
+export const NavList = ({evento}) => {
     return (
     <nav className='hidden justify-center items-center xl:flex'>
         <ul className='flex justify-center items-center gap-5'>

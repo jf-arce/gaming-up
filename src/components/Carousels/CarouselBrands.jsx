@@ -9,7 +9,7 @@ export const CarouselBrands = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1,
+    autoplaySpeed: 100,
     touchMove: false,
     pauseOnHover: false,
     arrows: false,

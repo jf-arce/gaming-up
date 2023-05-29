@@ -48,7 +48,7 @@ export const CarouselProducts = () => {
       ]
     };
     return (
-        <div className="w-10/12 m-auto">
+        <div className="w-10/12 lg:w-9/12 m-auto">
             <Slider {...settings}>
                 {products.map(prod => 
                     <div key={prod.id} className="slider-prod">
