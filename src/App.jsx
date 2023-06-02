@@ -1,7 +1,7 @@
 //React
 import React, { useState } from 'react'
 //elements
-import Home from './pages/Home';
+import { Home } from './pages/Home';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { TopBar } from './components/TopBar.jsx/TopBar';
