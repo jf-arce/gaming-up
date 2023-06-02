@@ -25,7 +25,7 @@ const stock = [
         Freesync/Gsync : G-Sync
         `,
         cantidad: 10,
-        precio: 269.999,
+        precio: 124.999,
         stock:6, 
         imagen:'https://www.fullh4rd.com.ar/img/productos/Pics_Prod/monitor-gamer-25-samsung-odyssey-g4-fhd-240hz-dp-hdmi-0.jpg',
         image1:'https://www.fullh4rd.com.ar/img/productos/Pics_Prod/monitor-gamer-25-samsung-odyssey-g4-fhd-240hz-dp-hdmi-0.jpg',

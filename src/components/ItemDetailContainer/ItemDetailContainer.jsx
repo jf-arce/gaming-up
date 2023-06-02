@@ -2,6 +2,7 @@ import { useState,useEffect } from 'react';
 import getItemData from '../../services/getItemData'
 import { ItemCount } from "../ItemCount/ItemCount";
 import { useParams } from 'react-router-dom';
+import { useCartContext } from '../../context/CartContext';
 
 export const ItemDetailContainer = () => {
 
@@ -10,6 +11,7 @@ export const ItemDetailContainer = () => {
   const [stock, setStock] = useState(null);
   const {id} = useParams();
   const active = 'border-2 border-gray-300 rounded-sm';
+  const { addItem } = useCartContext();
 
   useEffect(()=>{
     getItemData(id)
@@ -24,6 +26,10 @@ export const ItemDetailContainer = () => {
     setImg(image);
   }
 
+  const addToCart = (amount) =>{
+    addItem(product,amount);
+  }
+  
   return (
     <section className='min-h-screen'>
       <div data-aos="fade-down" className="bg-white grid grid-cols-1 grid-rows-[auto] w-11/12 min-h-screen xl:w-9/12 m-auto lg:grid-cols-2 lg:grid-rows-[auto]">
@@ -54,7 +60,7 @@ export const ItemDetailContainer = () => {
             <h4 className='text-xs'>{stock === true ? "En Stock" : "Sin Stock"}</h4>
           </div>
           <div className='flex justify-center items-center w-full before:content-[""] xl:before:w-[400px] before:w-[300px] before:h-[1.5px] before:bg-gray-300 before:absolute'>
-            <ItemCount stock={product.stock}/>
+            <ItemCount stock={product.stock} addToCart={addToCart}/>
           </div>
         </div>
         <div className="p-4 flex flex-col gap-5 pl-5">

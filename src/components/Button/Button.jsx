@@ -2,12 +2,11 @@ import { Link } from "react-router-dom"
 
 export const Button = props => {
   return ( 
-    <Link 
+    <button 
       className={props.className}  
       style={props.style} 
-      onClick={props.onclick} 
+      onClick={props.onClick} 
       disabled={props.disabled}
-      to={`/item/${props.id}`}
-    >{props.text}</Link>
+    >{props.text}</button>
   )
 }

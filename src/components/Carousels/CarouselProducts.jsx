@@ -25,21 +25,21 @@ export const CarouselProducts = () => {
       
       responsive: [
         {
-          breakpoint: 1600,
+          breakpoint: 1700,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
           }
         },
         {
-          breakpoint: 1200,
+          breakpoint: 1300,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
           }
         },
         {
-          breakpoint: 800,
+          breakpoint: 750,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
@@ -48,14 +48,14 @@ export const CarouselProducts = () => {
       ]
     };
     return (
-        <div className="w-10/12 lg:w-9/12 m-auto">
-            <Slider {...settings}>
-                {products.map(prod => 
-                    <div key={prod.id} className="slider-prod">
-                        <Item {...prod}/>
-                    </div>
-                )}
-            </Slider>
-        </div>
+      <div className="w-10/12 lg:max-w-[1280px] m-auto">
+        <Slider {...settings}>
+          {products.map(prod => 
+            <div key={prod.id} className="slider-prod">
+              <Item {...prod}/>
+            </div>
+          )}
+        </Slider>
+      </div>
     )
 }

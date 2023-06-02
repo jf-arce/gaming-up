@@ -13,7 +13,7 @@ export const NavList = ({evento}) => {
         <ul className='flex justify-center items-center gap-5'>
             <NavBarSections icon={<FontAwesomeIcon icon={faBasketShopping}/>} text={"Productos"} event={evento}/>
             <Link to='/about'>
-                <NavBarSections url="/product" icon={<FontAwesomeIcon icon={faWandMagicSparkles} />} text={"About"}/>
+                <NavBarSections url="/about" icon={<FontAwesomeIcon icon={faWandMagicSparkles} />} text={"About"}/>
             </Link>
             <Link to='/about'>
                 <NavBarSections icon={<FontAwesomeIcon icon={faUser} />} text={"Contacto"}/>

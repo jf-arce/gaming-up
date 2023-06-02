@@ -9,7 +9,7 @@ export default function Home(){
         <CarouselHero/>
         <h2 className='text-center text-3xl font-bold text-darkBlack m-10'> Destacados </h2>
         <CarouselProducts/>
-        <div className="w-9/12 mx-auto my-10">
+        <div className="max-w-[1180px] mx-auto my-10">
           <picture>
             <img src="https://gaming-city.com.ar/static/home-banner-secundario.jpg?v=1345393324" alt="" className="rounded-sm"/>
           </picture>
