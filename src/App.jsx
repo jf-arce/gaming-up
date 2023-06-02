@@ -18,8 +18,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
-
-
 function App() {
   AOS.init();
   const [active,setActive] = useState(false);
