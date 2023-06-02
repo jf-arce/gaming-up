@@ -4,7 +4,7 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 // Import Swiper styles
 import 'swiper/css/bundle';
 
-export default function CarouselHero () {
+export const CarouselHero = () => {
   return (
     <div data-aos="fade-right">
         <Swiper
