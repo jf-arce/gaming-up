@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext';
 
 export const ItemDetailContainer = () => {
-
   const [product, setProduct] = useState([]);
   const [img, setImg]=useState("");
   const [stock, setStock] = useState(null);
