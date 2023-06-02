@@ -1,5 +1,5 @@
 //React
-import React, { useState } from 'react'
+import { useState } from 'react'
 //elements
 import { Home } from './pages/Home';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
@@ -8,6 +8,7 @@ import { TopBar } from './components/TopBar.jsx/TopBar';
 import { Footer } from './components/Footer/Footer';
 import { About } from './pages/About';
 import { CartContextProvider } from './context/CartContext';
+import { CartView } from './components/CartView/CartView';
 //Layouts
 import { NavBar } from "./components/NavBar/NavBar"
 import { Dropdown } from './components/NavBar/Dropdown'
@@ -16,6 +17,7 @@ import { MenuResponsive } from './components/Responsive/MenuResponsive';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+
 
 
 function App() {
@@ -41,6 +43,7 @@ function App() {
               <Route path='/category/:categoryId' element={<ItemListContainer/>} />
               <Route path='/item/:id' element ={<ItemDetailContainer/>} />
               <Route path='/item/:id' element ={<ItemDetailContainer/>} />
+              <Route path='/cart' element = {<CartView/>} />
               <Route path='/about' element = {<About/>} />
               <Route path='*' element={<h1 className='absolute bottom-0'>Error 404: Page not found</h1>}/>
             </Routes>
