@@ -1,6 +1,5 @@
 import { CarouselProducts } from "../components/Carousels/CarouselProducts";
 import CarouselHero from "../components/Carousels/CarouselHero";
-import { ItemListContainer } from "../components/ItemListContainer/ItemListContainer"
 import { CarouselBrands } from "../components/Carousels/CarouselBrands";
 
 export default function Home(){
@@ -15,7 +14,6 @@ export default function Home(){
           </picture>
         </div>
         <CarouselBrands/>
-        {/* <ItemListContainer greeting="BIENVENID@ A GAMING UP"/> */}
       </div>
     )
 }
