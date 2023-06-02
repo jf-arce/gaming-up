@@ -1,7 +1,7 @@
 //React
 import { useState } from 'react'
 //elements
-import { Home } from './pages/Home';
+import { HomePage } from './pages/HomePage';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { TopBar } from './components/TopBar.jsx/TopBar';
@@ -17,6 +17,7 @@ import { MenuResponsive } from './components/Responsive/MenuResponsive';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+
 
 function App() {
   AOS.init();
@@ -36,7 +37,7 @@ function App() {
           <Dropdown active={active} setActive={setActive}/>
           <main onClick={()=> setActive(false)} className='bg-gray-100'>
             <Routes>
-              <Route path='/' element = {<Home/>} />
+              <Route path='/' element = {<HomePage/>} />
               <Route path='/category/all' element={<ItemListContainer/>} />
               <Route path='/category/:categoryId' element={<ItemListContainer/>} />
               <Route path='/item/:id' element ={<ItemDetailContainer/>} />

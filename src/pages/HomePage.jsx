@@ -2,7 +2,7 @@ import { CarouselProducts } from "../components/Carousels/CarouselProducts";
 import { CarouselHero } from "../components/Carousels/CarouselHero";
 import { CarouselBrands } from "../components/Carousels/CarouselBrands";
 
-export const Home = () =>{
+export const HomePage = () =>{
   return (
     <div className="home"> 
       <CarouselHero/>
