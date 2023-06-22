@@ -5,10 +5,17 @@ import { CartWidget } from '../CartWidget/CartWidget'
 import { Logo } from '../Logo/Logo'
 import { useHideTopBar } from '../../Hooks/useHideTopBar'
 import { NavList } from './NavList'
+import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 
 export const NavBar = ({evento}) => {
-  
   const isScrolled = useHideTopBar(44);
+  
+  const location = useLocation();
+  useEffect
+  useEffect(() => {
+    scrollTo(0,0);
+  }, [location]);
 
   return (
     <header className={`h-24 bg-darkBlack w-full ${isScrolled ? 'sticky top-0 z-20' : 'relative z-20'}`}>

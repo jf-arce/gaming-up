@@ -21,11 +21,21 @@ export const CartContextProvider = ({ children }) => {
   };
 
   //Contador de cantidad de productos que se agrego al carrito
-  const itemCount = () =>
+  const itemCount = () => 
     cart.reduce((totProd, prod) => totProd + prod.amount, 0);
 
+  //Precio total de productos a llevar
+  const totalPrice = () => 
+    cart.reduce((totPrice, prod) => totPrice + (prod.price*prod.amount), 0);
+
+  //Eliminar producto del carrito
+  const delateItem = (id) =>{
+    const newCart = cart.filter((prod) => prod.id !== id);
+    const updatedCart = [...newCart];
+    setCart(updatedCart);
+  }
   return (
-    <CartContext.Provider value={{ addItem, itemCount }}>
+    <CartContext.Provider value={{ addItem, itemCount, totalPrice, cart, delateItem}}>
       {children}
     </CartContext.Provider>
   );

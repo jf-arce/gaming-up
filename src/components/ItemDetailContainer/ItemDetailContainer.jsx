@@ -50,10 +50,10 @@ export const ItemDetailContainer = () => {
           </div>
         </div>
         <div className="flex flex-col items-start justify-start p-10 gap-11 border-[1px] border-l-gray-300 border-b-gray-300 relative">
-          <h2 className="text-3xl text-start font-bold">{product.nombre}</h2>
+          <h2 className="text-3xl text-start font-bold">{product.name}</h2>
           <div className='flex flex-col gap-4'>
             <p className='text-xl'>Precio efectivo o transferencia:</p>
-            <p className='text-3xl font-bold'>${product.precio}</p>
+            <p className='text-3xl font-bold'>${product.price}</p>
           </div>
           <div className={`${stock === true ? 'bg-green-500' : 'bg-red-500'} px-2 py-1 rounded-sm`}>
             <h4 className='text-xs'>{stock === true ? "En Stock" : "Sin Stock"}</h4>
@@ -64,7 +64,7 @@ export const ItemDetailContainer = () => {
         </div>
         <div className="p-4 flex flex-col gap-5 pl-5">
           <h2 className='text-2xl py-3'>Especificaciones Tecnicas</h2>
-          <p className="text-sm" style={{fontFamily: 'Telgraf'}}>{product.descripcion}</p>
+          <p className="text-sm" style={{fontFamily: 'Telgraf'}}>{product.description}</p>
         </div>
       </div>
     </section>
