@@ -6,8 +6,10 @@ import "slick-carousel/slick/slick-theme.css";
 import { useEffect , useState} from 'react';
 import { Item } from '../ItemListContainer/Item';
 import { getData } from '../../services/firebaseConfig';
+import { Loader } from "../Loader/Loader";
 
-export const CarouselProducts = () => {
+
+export const CarouselProducts = ({homeLoader}) => {
 
     const [products, setProducts] = useState([]);
     useEffect(()=>{
@@ -47,6 +49,9 @@ export const CarouselProducts = () => {
         }
       ]
     };
+
+    if (products.length === 0) return <Loader/>
+    
     return (
       <div className="w-10/12 lg:max-w-[1280px] m-auto">
         <Slider {...settings}>

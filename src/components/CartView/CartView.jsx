@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "../../context/CartContext";
 import { CartProduct } from "./CartProduct";
+import { Button } from "../Button/Button";
 
 export const CartView = () => {
   const { itemCount, totalPrice, cart , delateItem, clearCart} = useCartContext();
-
+ 
   const handleDelateItem = (id) =>{
     delateItem(id);
   }
@@ -43,14 +44,14 @@ export const CartView = () => {
           <h3 className="border-b-2 border-gray-200">Resumen de compra</h3>
           <div className="flex justify-between">
             <h4>Productos ({itemCount()})</h4>
-            <h4>{totalPrice()}</h4>
+            <h4>$ {totalPrice()}</h4>
           </div>
           <div className="flex justify-between">
             <h3>Total</h3>
-            <h3>{totalPrice()}</h3>
+            <h3>$ {totalPrice()}</h3>
           </div>
-          <Link className="btn text-center">Continuar compra</Link>
-          <Link className="btn text-center" onClick={handleClearCart}>Vaciar carrito</Link>
+          <Link to="/checkout" className="btn text-center">Continuar compra</Link>
+          <Button className="btn text-center cursor-pointer" onClick={handleClearCart} text="Vaciar carrito"/>
         </div>
       </div>
       <div className="max-w-[1180px] mx-auto p-10">

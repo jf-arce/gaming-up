@@ -41,16 +41,12 @@ export const ItemCount = ({ stock, addToCart }) => {
         <Button
           text={
             <>
-              {cartIcon} {`Agregar`}
+              {cartIcon} {`Agregar al carrito`}
             </>
           }
           className="btn2"
           onClick={() => addToCart(amount)}
           disabled={!stock}
-        />
-        <Button 
-          text="Comprar Ahora" 
-          className="btn" 
         />
       </div>
     </div>

@@ -17,6 +17,8 @@ import { MenuResponsive } from './components/Responsive/MenuResponsive';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { CheckoutForm } from './components/CheckoutForm/CheckoutForm';
+import { OrderConfirm } from './components/OrderConfirm/OrderConfirm';
 
 
 function App() {
@@ -43,6 +45,8 @@ function App() {
               <Route path='/item/:id' element ={<ItemDetailContainer/>} />
               <Route path='/item/:id' element ={<ItemDetailContainer/>} />
               <Route path='/cart' element = {<CartView/>} />
+              <Route path='/checkout' element = {<CheckoutForm/>} />
+              <Route path='/order-confirmation/:orderId' element = {<OrderConfirm/>} />
               <Route path='/about' element = {<About/>} />
               <Route path='*' element={<h1 className='absolute bottom-0'>Error 404: Page not found</h1>}/>
             </Routes>

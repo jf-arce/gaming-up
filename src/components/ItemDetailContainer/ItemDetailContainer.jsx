@@ -1,9 +1,9 @@
 import { useState,useEffect } from 'react';
-// import getItemData from '../../services/getItemData'
 import { getItemData } from '../../services/firebaseConfig';
 import { ItemCount } from "../ItemCount/ItemCount";
 import { useParams } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext';
+import { Loader } from '../Loader/Loader';
 
 export const ItemDetailContainer = () => {
   const [product, setProduct] = useState([]);
@@ -29,6 +29,8 @@ export const ItemDetailContainer = () => {
   const addToCart = (amount) =>{
     addItem(product,amount);
   }
+
+  if (product.length === 0) return <Loader/>
   
   return (
     <section className='min-h-screen'>
