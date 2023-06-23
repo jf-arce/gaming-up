@@ -34,8 +34,17 @@ export const CartContextProvider = ({ children }) => {
     const updatedCart = [...newCart];
     setCart(updatedCart);
   }
+
+  //Existe en el carrito
+  const isInCart = (id) => cart.some(prod => prod.id === id);
+
+  //Limpiar carrito
+  const clearCart = () => {
+    setCart([]);
+  }
+
   return (
-    <CartContext.Provider value={{ addItem, itemCount, totalPrice, cart, delateItem}}>
+    <CartContext.Provider value={{ addItem, itemCount, totalPrice, cart, delateItem, isInCart, clearCart}}>
       {children}
     </CartContext.Provider>
   );

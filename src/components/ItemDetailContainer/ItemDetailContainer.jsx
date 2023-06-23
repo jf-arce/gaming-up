@@ -1,5 +1,6 @@
 import { useState,useEffect } from 'react';
-import getItemData from '../../services/getItemData'
+// import getItemData from '../../services/getItemData'
+import { getItemData } from '../../services/firebaseConfig';
 import { ItemCount } from "../ItemCount/ItemCount";
 import { useParams } from 'react-router-dom';
 import { useCartContext } from '../../context/CartContext';

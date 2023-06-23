@@ -1,11 +1,11 @@
 import { useState,useEffect } from 'react';
-import getData from '../../services/getData'
-import getCategoryData from '../../services/getCategoryData'
+import { getData } from '../../services/firebaseConfig';
+import { getCategoryData } from '../../services/firebaseConfig';
 import { ItemList } from './ItemList';
 import { useParams } from 'react-router-dom';
 import { Filter } from '../Filter/Filter';
 
-export const ItemListContainer = props =>{
+export const ItemListContainer = () =>{
     const [products, setProducts] = useState([]);
     const {categoryId} = useParams();
 

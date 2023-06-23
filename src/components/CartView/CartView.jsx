@@ -3,10 +3,32 @@ import { useCartContext } from "../../context/CartContext";
 import { CartProduct } from "./CartProduct";
 
 export const CartView = () => {
-  const { itemCount, totalPrice, cart , delateItem} = useCartContext();
+  const { itemCount, totalPrice, cart , delateItem, clearCart} = useCartContext();
 
   const handleDelateItem = (id) =>{
     delateItem(id);
+  }
+
+  const handleClearCart = () =>{
+    clearCart()
+  }
+
+  if ( cart.length === 0 ){
+    return(
+      <div className="min-h-screen bg-gray-200 py-10">
+        <div className="bg-white flex flex-col justify-center items-center px-10 py-5 rounded-sm m-auto max-w-[1280px]">
+          <h1 className="text-center">El carrito esta vacío</h1>
+          <div>
+            <Link to="/" className="btn text-center">Descubrir productos</Link>
+          </div>
+        </div>
+        <div className="max-w-[1180px] mx-auto p-10">
+          <picture>
+            <img src="https://gaming-city.com.ar/static/home-banner-secundario.jpg?v=1345393324" alt="" className="rounded-sm"/>
+          </picture>
+       </div>
+      </div>
+    )
   }
 
   return (
@@ -28,7 +50,13 @@ export const CartView = () => {
             <h3>{totalPrice()}</h3>
           </div>
           <Link className="btn text-center">Continuar compra</Link>
+          <Link className="btn text-center" onClick={handleClearCart}>Vaciar carrito</Link>
         </div>
+      </div>
+      <div className="max-w-[1180px] mx-auto p-10">
+        <picture>
+          <img src="https://gaming-city.com.ar/static/home-banner-secundario.jpg?v=1345393324" alt="" className="rounded-sm"/>
+        </picture>
       </div>
     </div>
   );

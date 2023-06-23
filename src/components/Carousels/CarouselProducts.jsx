@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { useEffect , useState} from 'react';
 import { Item } from '../ItemListContainer/Item';
-import getData from '../../services/getData';
+import { getData } from '../../services/firebaseConfig';
 
 export const CarouselProducts = () => {
 
