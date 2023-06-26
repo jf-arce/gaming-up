@@ -12,7 +12,7 @@ export const NavBar = ({evento}) => {
   const isScrolled = useHideTopBar(44);
   
   const location = useLocation();
-  useEffect
+  
   useEffect(() => {
     scrollTo(0,0);
   }, [location]);

@@ -51,31 +51,32 @@ export const CheckoutForm = () => {
 
   return (
     <div className="min-h-screen bg-gray-200">
-      <div className="flex py-10 m-auto gap-3 max-w-[1280px] justify-between">
+      <div className="flex flex-col md:flex-row py-10 m-auto gap-3 max-w-[1280px] justify-between">
         <form
           onSubmit={handleConfirm}
           className="flex flex-col flex-grow bg-white p-5"
+          data-aos="fade-up"
         >
           <h1>Completa tu compra</h1>
           <div className="flex flex-col gap-5">
             <input
               type="text"
               placeholder="Nombre"
-              className="p-3 border-2 border-gray-400 rounded-sm w-[80%]"
+              className="p-3 border-2 border-gray-400 rounded-sm md:w-[80%]"
               value={name}
               onChange={({ target }) => setName(target.value)}
             />
             <input
               type="email"
               placeholder="Email"
-              className="p-3 border-2 border-gray-400 rounded-sm w-[80%]"
+              className="p-3 border-2 border-gray-400 rounded-sm md:w-[80%]"
               value={email}
               onChange={({ target }) => setEmail(target.value)}
             />
             <input
               type="tel"
               placeholder="Telefono"
-              className="p-3 border-2 border-gray-400 rounded-sm w-[80%]"
+              className="p-3 border-2 border-gray-400 rounded-sm md:w-[80%]"
               value={phone}
               onChange={({ target }) => setPhone(target.value)}
             />
@@ -85,7 +86,7 @@ export const CheckoutForm = () => {
             </div>
           </div>
         </form>
-        <div className="bg-white p-5 flex flex-col gap-5 rounded-sm w-80">
+        <div className="bg-white p-5 flex flex-col gap-5 rounded-sm md:w-80">
           <h3 className="border-b-2 border-gray-200">Resumen de compra</h3>
           <div className="flex justify-between">
             <h4>Productos ({itemCount()})</h4>

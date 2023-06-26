@@ -5,9 +5,9 @@ export const OrderConfirm = () => {
     const {orderId} = useParams();
   return (
     <div className='min-h-screen bg-gray-200'>
-        <div className='flex flex-col py-10 m-auto gap-5 max-w-[1280px] justify-center items-center bg-white'>
-            <h1 className='text-center text-5xl'>¡Gracias por tu compra!</h1>
-            <p className='text-center text-xl'>Este es tu comprobante de compra: {orderId}</p>
+        <div className='flex flex-col py-10 m-auto gap-5 max-w-[1280px] justify-center items-center bg-white' data-aos="fade-up">
+            <h1 className='text-center md:text-5xl text-3xl'>¡Gracias por tu compra!</h1>
+            <p className='text-center md:text-xl text-lg'>Este es tu comprobante de compra: {orderId}</p>
             <div className='mt-10'>
                 <Link to="/" className="btn text-center">Volver al inicio</Link>
             </div>

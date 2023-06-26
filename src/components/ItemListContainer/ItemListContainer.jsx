@@ -19,7 +19,7 @@ export const ItemListContainer = () =>{
     if (products.length === 0) return <Loader/>
 
     return(
-        <section className="flex min-h-screen py-10 m-auto gap-3 max-w-[1280px]">
+        <section className="flex flex-col md:flex-row min-h-screen pb-10 md:py-10 m-auto gap-3 max-w-[1280px]">
             <Filter/>
             <ItemList products={products}/>
         </section>

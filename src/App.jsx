@@ -1,6 +1,6 @@
 //React
-import { useState } from 'react'
-//elements
+import { useEffect, useState } from 'react'
+//components
 import { HomePage } from './pages/HomePage';
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
@@ -9,6 +9,7 @@ import { Footer } from './components/Footer/Footer';
 import { About } from './pages/About';
 import { CartContextProvider } from './context/CartContext';
 import { CartView } from './components/CartView/CartView';
+import { Loader } from './components/Loader/Loader';
 //Layouts
 import { NavBar } from "./components/NavBar/NavBar"
 import { Dropdown } from './components/NavBar/Dropdown'
@@ -21,6 +22,7 @@ import { CheckoutForm } from './components/CheckoutForm/CheckoutForm';
 import { OrderConfirm } from './components/OrderConfirm/OrderConfirm';
 
 
+
 function App() {
   AOS.init();
   const [active,setActive] = useState(false);
@@ -28,6 +30,15 @@ function App() {
   const dropDownEvent=()=>{
     setActive(!active);
   }
+
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    //carga asincrónica
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  }, []);
 
   return(
     <div className='App bg-lightBlack'>
@@ -39,7 +50,7 @@ function App() {
           <Dropdown active={active} setActive={setActive}/>
           <main onClick={()=> setActive(false)} className='bg-gray-100'>
             <Routes>
-              <Route path='/' element = {<HomePage/>} />
+              <Route path='/' element = {isLoading ? <Loader/> : <HomePage/>} />
               <Route path='/category/all' element={<ItemListContainer/>} />
               <Route path='/category/:categoryId' element={<ItemListContainer/>} />
               <Route path='/item/:id' element ={<ItemDetailContainer/>} />
