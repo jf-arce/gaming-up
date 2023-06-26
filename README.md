@@ -9,7 +9,7 @@
 # *Informacion del proyecto:*
 
 A continuacion una descripcion del proyecto final del curso de ReactJS de [CoderHouse](https://www.coderhouse.com).
-Es sobre un Ecommerce especializado en componentes de PC y periféricos de última generación para gaming, el mismo esta desarrollado con Vite.
+Se trata de un Ecommerce especializado en componentes de PC y periféricos de última generación para gaming, el mismo esta desarrollado con Vite.
 Para la base de datos se utilizo Firebase tanto para las colecciones de productos como las de ordenes.
 
 
