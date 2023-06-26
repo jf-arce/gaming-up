@@ -35,7 +35,7 @@ export const MenuResponsive = ({active,setActive}) => {
         <div className={`${active? "dropDown-active" : "hidden"} ${isScrolled ? 'fixed top-24' : 'absolute top-[140px]'} w-screen z-10 bg-lightBlack xl:hidden`}>
             <div className="flex flex-col justify-center items-center">
                 <h2 className="m-5 text-3xl text-slate-200">Carrito</h2>
-                <CartWidget/>
+                <CartWidget event={handleClickChoice}/>
             </div>
             <ul className='flex flex-col justify-center items-start gap-11 h-full m-9 relative'>
                 <NavBarSections icon={<FontAwesomeIcon icon={faBasketShopping} />}text={`Productos`} event={handleMenu}/>
